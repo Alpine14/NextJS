@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Counter from '../components/Counter';
+import FakeStore from "../components/FakeStore";
 
 export default function Home() {
   return (
@@ -10,16 +11,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <main>
         <h1 className={styles.title}>
           Jack Welcomes You To <a href="https://nextjs.org">Next.js!</a>
-          <Counter>+1</Counter>
+          <Counter increment={1}>+1</Counter>
+          <Counter increment={2}>+2</Counter>
+
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          Github Repo for this site: "https://github.com/Alpine14/NextJS"
         </p>
-
+       <FakeStore>Store</FakeStore>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
